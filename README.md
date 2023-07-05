@@ -2,9 +2,11 @@
 
 This is a simple implementation to in-painting sparse depth map of KITTI Dataset for monocular depth estimation task training or result visulization.
 
+Borrow from https://github.com/wangq95/KITTI_Dense_Depth.
+
 ## Requirements
 
-These code has been tested with Python 2.7 and Matlab-linux on Ubuntu 16.04 LTS.
+These code has been tested with Python 3.6 and Matlab-linux on Ubuntu 20.04 LTS.
 
 ## Dataset preparation
 
@@ -19,7 +21,7 @@ You would want to follow the traditional split of Eigen, the training list file 
 
 ## In-painting
 
-- Firstly, you can generate the **projected** depth ground-truth by running the python code provided by:
+- Firstly, you can generate the **projected** depth ground-truth from velodyne point cloud by running the python code provided by:
 
 https://github.com/danxuhk/StructuredAttentionDepthEstimation
 
@@ -42,10 +44,10 @@ im_color = cv2.applyColorMap(im, cv2.COLORMAP_JET)
 ## Example
 
 original rgb image:
-![rgb](https://github.com/QianshengGu/KITTI_Dense_Depth/blob/master/misc/simple_rgb.png)
+![simple_rgb.png](misc%2Fsimple_rgb.png)
 
 Sparse depth map that only about ``16%`` pixels available:
-![sparse](https://github.com/QianshengGu/KITTI_Dense_Depth/blob/master/misc/simple_depth_sparse_jet.png)
+![simple_depth_sparse_jet.png](misc%2Fsimple_depth_sparse_jet.png)
 
 Colorful dense map:
-![dense](https://github.com/QianshengGu/KITTI_Dense_Depth/blob/master/misc/simple_depth_dense_jet.png)
+![simple_depth_dense_jet.png](misc%2Fsimple_depth_dense_jet.png)
